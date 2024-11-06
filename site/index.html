@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu site portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Certifique-se de que #particles-js ocupe toda a tela */
+        #particles-js {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -32,6 +45,7 @@
 
     <script src="particles.min.js"></script>
     <script>
+        // Configuração das partículas
         particlesJS("particles-js", {
             "particles": {
                 "number": {
@@ -91,9 +105,21 @@
             },
             "retina_detect": true
         });
+
+        // Ajustar o tamanho de #particles-js ao redimensionar a tela
+        function resizeParticles() {
+            const particlesElement = document.getElementById('particles-js');
+            particlesElement.style.width = `${window.innerWidth}px`;
+            particlesElement.style.height = `${window.innerHeight}px`;
+        }
+
+        // Chama resizeParticles ao carregar a página e ao redimensionar
+        window.addEventListener('load', resizeParticles);
+        window.addEventListener('resize', resizeParticles);
     </script>
 
     <script>
+        // Texto dinâmico no título
         const words = ["Front", "Web", "Freelancer"];
         let index = 0;
 

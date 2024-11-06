@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     height: 100vh;
     position: relative;
+    overflow-x: hidden;
 }
 
 #vantajs-background {
@@ -20,6 +21,7 @@ body {
     left: 0;
     z-index: -1;
     overflow: hidden;
+    pointer-events: none;
 }
 
 h1 {
@@ -134,14 +136,19 @@ h3 {
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     main {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding-bottom: 120px;
+        width: 90%; /* Ajuste a largura para telas pequenas */
+    }
+
+    footer {
+        padding: 0.5rem;
     }
 
     h2 {
@@ -150,5 +157,13 @@ h3 {
 
     h3 {
         font-size: 1.2rem;
+    }
+
+    /* Ajuste para o fundo de partículas em telas pequenas */
+    #vantajs-background {
+        width: 100vw;
+        height: 100vh;
+        /* Reduza o tamanho das partículas para dispositivos móveis */
+        transform: scale(0.8); /* ou ajuste conforme necessário */
     }
 }
