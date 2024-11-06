@@ -1,1 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: large;
+    background-color: #1c1c1c;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #000;
+    padding: 20px; /* Aumentei o padding para garantir mais espaço no celular */
+    border-radius: 10px;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 80px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 3px solid #f39c12;
+    padding: 3px;
+    animation: pulse-border 1.5s infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        border-color: #f39c12;
+        transform: scale(1);
+    }
+    50% {
+        border-color: #e67e22;
+        transform: scale(1.05);
+    }
+    100% {
+        border-color: #f39c12;
+        transform: scale(1);
+    }
+}
+
+h2, p {
+    color: #ffffff;
+}
+h3 {
+    font-size: medium;
+    font-style: italic;
+    color: rgb(153, 149, 149);
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills-title {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 40px;
+    height: auto;
+    margin: 10px;
+}
+
+.links {
+    margin: 10px 0;
+}
+
+.social-title {
+    background-color: #101010;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.icon-background {
+    background-color: #101010;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.icon-background:hover {
+    background-color: #f39c12;
+    transform: scale(1.05);
+}
+
+.link-grid img {
+    width: 40px;
+    height: auto;
+}
+
+/* Ajuste para manter o .btn-large em duas colunas no mobile */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas para os botões */
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn-large {
+    background-color: #f39c12;
+    padding: 12px 25px; /* Ajustei o tamanho dos botões */
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+}
+
+.btn-large:hover {
+    background-color: #101010;
+    transform: scale(1.05);
+}
+
+.spotify-player {
+    background-color: #101010;
+    border-radius: 5px;
+    margin-top: 19px;
+    text-align: center;
+}
+
+/* Media Query para telas pequenas (máximo de 768px de largura) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Garantir que o padding seja confortável no celular */
+    }
+
+    .profile-img {
+        width: 70px; /* Ajustei a largura para ficar mais proporcional em telas menores */
+    }
+
+    .btn-large {
+        padding: 12px 25px; /* Ajustei o tamanho dos botões */
+    }
+
+    .link-grid {
+        grid-template-columns: 1fr; /* Uma coluna para links no celular */
+    }
+
+    .icon {
+        width: 50px; /* Maior ícone em telas pequenas */
+    }
+
+    body {
+        font-size: medium;
+    }
+}
+
+/* Media Query para telas muito pequenas (máximo de 480px de largura) */
+@media (max-width: 480px) {
+    .profile-img {
+        width: 60px; /* Ícones menores ainda em telas muito pequenas */
+    }
+
+    .btn-large {
+        padding: 10px 20px; /* Botões menores */
+        font-size: small;
+    }
+
+    .link-grid {
+        grid-template-columns: 1fr; /* Apenas uma coluna de links */
+    }
+
+    body {
+        font-size: small;
+    } 
+}
 
