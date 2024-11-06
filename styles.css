@@ -140,7 +140,7 @@ h3 {
 
 .btn-large {
     background-color: #f39c12;
-    padding: 12px 25px; /* Ajustei o tamanho dos botões */
+    padding: 12px 80px; /* Ajustei o tamanho dos botões */
     border-radius: 5px;
     color: #ffffff;
     text-decoration: none;
@@ -172,11 +172,6 @@ h3 {
     .profile-img {
         width: 70px; /* Ajustei a largura para ficar mais proporcional em telas menores */
     }
-
-    .btn-large {
-        padding: 12px 25px; /* Ajustei o tamanho dos botões */
-    }
-
     .link-grid {
         grid-template-columns: 1fr; /* Uma coluna para links no celular */
     }
