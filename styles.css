@@ -129,18 +129,25 @@ h3 {
     height: auto;
 }
 
+/* Ajuste para manter o .btn-large em duas colunas no mobile */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas para os botões */
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
 .btn-large {
     background-color: #f39c12;
-    padding: 15px 55px;
+    padding: 15px;
     border-radius: 5px;
-    justify-content: center;
     color: #ffffff;
-    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s, transform 0.2s;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 .btn-large:hover {
@@ -199,5 +206,5 @@ h3 {
 
     body {
         font-size: small;
-    }
-}
+    } 
+}   
