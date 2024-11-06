@@ -1,7 +1,3 @@
-Aqui está um exemplo de README para o seu projeto de Link Bio:
-
----
-
 # Link Bio - Portfólio Pessoal
 
 Este é um projeto pessoal de Link Bio que desenvolvi para centralizar minhas redes sociais e o site do meu portfólio em uma única página. Ele é ideal para usar em redes sociais, onde você pode compartilhar um link que leva para todas as suas principais plataformas.
